@@ -1,7 +1,7 @@
 const Homepage = () => {
     return (
         <section>
-            <h1>Welcome to our homepage</h1>
+            <h1>Welcome tohjghgf</h1>
         </section>
     )
 }
