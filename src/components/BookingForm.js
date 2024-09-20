@@ -1,15 +1,7 @@
 import React, {useState} from 'react';
 
-const BookingForm = () => {
+const BookingForm = ({availableTimes}) => {
     const [date, setDate] = useState();
-    const [timeOptions] = useState([
-        '17:00',
-        '18:00',
-        '19:00',
-        '20:00',
-        '21:00',
-        '22:00'
-    ]);
     const [occasionOptions] = useState([
         'Birthday',
         'Anniversary'
@@ -37,7 +29,7 @@ const BookingForm = () => {
                 <label htmlFor="res-time">Choose time</label>
                 <select value={selectedTime} onChange={handleTime} id="res-time" multiple={false}>
                     {
-                        timeOptions.map((time, index) => (
+                        availableTimes.map((time, index) => (
                             <option key={index}>{time}</option>
                         ))
                     }
